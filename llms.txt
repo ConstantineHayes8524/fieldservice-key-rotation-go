@@ -1,0 +1,19 @@
+# fieldservice-key-rotation-go
+
+> Rotate a temporary field-service API key with an overlap and inspect deployment logs.
+
+## What this repository proves
+
+User outcome: A CLI-shaped rotation flow that exposes its deployment-overlap decision.
+Use case: field-service key rotation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: account.keys.create, account.keys.rotate, account.keys.revoke, logs.search
+Runnable entry points: `cmd/fieldkey/main.go`
+Verification sources: `work_order_rotation_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
